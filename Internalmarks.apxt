@@ -1,0 +1,10 @@
+trigger Internalmarks on Internal_results__c (before insert) {
+
+     If(trigger.isInsert)
+    {
+        If(trigger.isBefore)
+        {
+            InternalmarksHandler.beforeinsert(Trigger.new);  
+        }
+    }
+}
