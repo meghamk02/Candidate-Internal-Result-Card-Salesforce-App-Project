@@ -1,0 +1,14 @@
+public class InternalmarksHandler {
+    public static void beforeinsert(list<Internal_results__c> newlist){
+        
+        for(Internal_results__c internalmarks : newlist){
+            if(internalmarks.marks__c >= 200){
+                internalmarks.status__c = 'Pass';
+            }else{
+                internalmarks.status__c='fail';
+            }
+            
+        }
+        
+    }
+}
